@@ -36,6 +36,7 @@ public class 岛屿的个数 {
             return ;
         }
 
+
         if(grid[i][j]!='1'){
             return;
         }

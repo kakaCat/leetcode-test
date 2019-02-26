@@ -11,7 +11,7 @@ public class MyStack {
     public MyStack(int k){
         data = new int[k];
         size = k;
-        top =-1;
+        top = -1;
     }
     public boolean push(int x) {
         if(isFull()){
