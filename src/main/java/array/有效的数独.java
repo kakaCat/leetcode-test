@@ -8,7 +8,7 @@ public class 有效的数独 {
     public static boolean isValidSudoku(char[][] board) {
 
 
-
+        return false;
     }
 
 }
