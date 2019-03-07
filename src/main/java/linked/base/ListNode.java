@@ -13,7 +13,19 @@ public class ListNode {
 
     }
 
+    public ListNode add(ListNode node){
+        ListNode temp = null;
+        while (this.next != null ){
+            temp = this.next;
+        }
+        if(temp == null){
+            this.next = node;
+        }else {
+            temp.next = node;
+        }
 
+        return this;
+    }
 
 
 }
