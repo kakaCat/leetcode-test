@@ -11,9 +11,7 @@ import java.util.List;
 public class 反转链表 {
 
     public static void main(String[] args) {
-        ListNode head = new ListNode();
-
-
+        ListNode head = new ListNode(1).add(new ListNode(2).add(new ListNode(3)));
 
         reverseList(head);
 
@@ -22,26 +20,28 @@ public class 反转链表 {
 
     }
 
-    public static ListNode reverseList(ListNode head) {
+    public static ListNode reverseList(ListNode node) {
         ListNode pre = null;
-        ListNode top = null;
-        ListNode current = head;
+        ListNode head = null;
+        ListNode current = node;
 
-        while(current==null||current.next==null){
+        while(current!=null){
             ListNode temp = current.next;
             if(temp == null){
-                top = current;
+                head = current;
             }
-            temp.next =pre;
 
+            current.next =pre;
             pre = current;
+
+            /** nextnode */
             current = temp;
 
 
         }
 
 
-        return top;
+        return current;
     }
 
 

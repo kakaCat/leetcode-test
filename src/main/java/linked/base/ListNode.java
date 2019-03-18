@@ -12,6 +12,18 @@ public class ListNode {
     public ListNode() {
 
     }
+    public ListNode addVal(int val){
+        ListNode node = new ListNode(val);
+        ListNode current = this;
+
+        while (current !=null){
+            current = current.next;
+        }
+        current.next = node;
+        return this;
+    }
+
+
 
     public ListNode add(ListNode node){
         ListNode temp = null;
