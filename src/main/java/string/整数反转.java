@@ -3,7 +3,7 @@ package string;
 public class 整数反转 {
 
     public static void main(String[] args) {
-        int nums = 120;
+        int nums = 1230;
         int reverse = reverse(nums);
         System.out.println(reverse);
     }
