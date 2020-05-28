@@ -1,8 +1,6 @@
-package leetcode1l10;
+package leetcode1_10;
 
 import linked.base.ListNode;
-
-import java.util.LinkedHashMap;
 
 public class $2 {
 

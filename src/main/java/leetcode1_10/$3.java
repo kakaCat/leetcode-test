@@ -1,4 +1,4 @@
-package leetcode1l10;
+package leetcode1_10;
 
 public class $3 {
 
