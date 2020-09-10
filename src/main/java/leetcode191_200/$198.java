@@ -36,6 +36,17 @@ public class $198 {
         return dp[length - 1];
     }
 
+    public static int rob2(int[] nums){
+        int pre = 0, cur = 0, tmp;
+        for(int num : nums) {
+            tmp = cur;
+            cur = Math.max(pre + num, cur);
+            pre = tmp;
+        }
+        return cur;
+
+    }
+
 
 
 }
