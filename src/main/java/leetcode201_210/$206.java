@@ -12,7 +12,7 @@ public class $206 {
     public static void main(String[] args) {
 
         ListNode head = new ListNode(1).add(new ListNode(2).add(new ListNode(3)));
-        reverseList(head);
+        reverseList2(head);
 
     }
     public static ListNode reverseList(ListNode head) {
@@ -24,6 +24,17 @@ public class $206 {
         head.next.next = head;
         head.next = null;
         return resverse;
+    }
+
+    public static ListNode reverseList2(ListNode head) {
+        ListNode pre=null, curr=head;
+        while (curr!=null){
+            ListNode next = curr.next;
+            curr.next = pre;
+            pre = curr;
+            curr = next;
+        }
+        return pre;
     }
 
 }

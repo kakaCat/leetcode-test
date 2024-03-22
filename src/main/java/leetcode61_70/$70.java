@@ -11,10 +11,37 @@ public class $70 {
 
     public static void main(String[] args) {
 
-        int i = climbStairs(8);
+        int i = climbStairs3(4);
         System.out.println(i);
-
     }
+
+    public static int climbStairs3(int n) {
+        if(n==1){
+            return 1;
+        }
+        int first =1 ,seconde =2;
+
+
+        for (int i = 3; i <= n; i++) {
+            int three = first + seconde;
+            first = seconde;//fn(n-2)
+            seconde = three;//fn(n-1)
+        }
+        return seconde;//fn(n) = fn(n-1) + fn(n-2)
+    }
+
+    public static int climbStairs2(int n) {
+        int first = 0, seconde = 0, three = 1;
+        for (int i = 1; i <= n; ++i) {
+            first = seconde;//f(0)
+            seconde = three;//f(1)
+            three = first + seconde;//f(0) + fn(1)
+        }
+        return seconde;
+    }
+
+
+
 
     public static int climbStairs(int n) {
         return doClimbStairs(0, n);

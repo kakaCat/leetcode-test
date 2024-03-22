@@ -1,4 +1,4 @@
-package leetcode61_70;
+package leetcode71_80;
 
 /**
  * @ClassName $75
