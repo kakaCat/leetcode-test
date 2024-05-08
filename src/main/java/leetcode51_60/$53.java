@@ -1,5 +1,8 @@
 package leetcode51_60;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * @ClassName $53
  * @Description 53. 最大子序和
@@ -10,9 +13,12 @@ package leetcode51_60;
 public class $53 {
 
     public static void main(String[] args) {
+        String s = null;
 
+        Set<Integer> set = new HashSet<>();
+//        set.contains();
         int[] arr = new int[]{-2,1,-3,4,-1,2,1,-5,4};
-        int i = maxSubArray(arr);
+        int i = maxSubArray2(arr);
         System.out.println(i);
     }
 
@@ -28,6 +34,23 @@ public class $53 {
         return max;
     }
 
+    public static int maxSubArray2(int[] nums) {
+        int len = nums.length;
+        int[] dp = new int[len];
+        dp[0] = nums[0];
 
+        for(int i=1; i<len; i++){
+            if(dp[i-1]>0){
+                dp[i] = dp[i-1]+nums[i];
+            }else{
+                dp[i] = nums[i];
+            }
+        }
+        int max = dp[0];
+        for(int i = 1;i<len;i++){
+            max = Math.max(max,dp[i]);
+        }
+        return max;
+    }
 
 }

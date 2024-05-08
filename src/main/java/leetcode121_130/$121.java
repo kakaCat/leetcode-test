@@ -10,7 +10,8 @@ package leetcode121_130;
 public class $121 {
 
     public static void main(String[] args) {
-
+        String str ="";
+//        str.substring()
         int[] nums1 = {7,1,5,3,6,4};
         int i = maxProfit(nums1);
         System.out.println(i);

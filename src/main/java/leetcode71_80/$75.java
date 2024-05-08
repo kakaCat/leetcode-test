@@ -10,12 +10,33 @@ package leetcode71_80;
 public class $75 {
 
     public static void main(String[] args) {
-
         int[] arr = new int[]{2,0,1};
-        sortColors(arr);
+
+        sortColors2(arr);
+    }
+    public static void sortColors2(int[] nums) {
+        int r = nums.length-1,l = 0 ,b =0;
+        while(b<=r){
+            if(nums[b]==0 ){
+                swap(nums,b,l);
+                l++;
+                b++;
+            }else if(nums[b]==2){
+                swap(nums,r,b);
+                r--;
+            }else{
+                b++;
+            }
+
+        }
     }
 
+    public static void swap(int[] nums,int l,int r){
+        int t = nums[l];
+        nums[l] = nums[r];
+        nums[r] = t;
 
+    }
     public static void sortColors(int[] nums) {
         // 对于所有 idx < i : nums[idx < i] = 0
         // j是当前考虑元素的下标

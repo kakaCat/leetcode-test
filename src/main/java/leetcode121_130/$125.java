@@ -10,9 +10,27 @@ package leetcode121_130;
 public class $125 {
 
     public static void main(String[] args) {
-
+        String palindrome = "A man, a plan, a canal, Panama";
+        boolean isPalindrome = isPalindrome1(palindrome);
     }
-
+    public static boolean isPalindrome1(String s) {
+        char[] arr = s.toCharArray();
+        int l=0,r=s.length()-1;
+        while(l<r){
+            while(l<r && arr[l]==' '){
+                l++;
+            }
+            while(l<r && arr[r]==' '){
+                r--;
+            }
+            if(l<=r && Character.toLowerCase(arr[l]) != Character.toLowerCase(arr[r])){
+                return false;
+            }
+            l++;
+            r--;
+        }
+        return true;
+    }
     public static boolean isPalindrome(String s) {
 
         if(s == null||s.length()==0){

@@ -1,4 +1,4 @@
-package leetcode91_100;
+package leetcode101_110;
 
 import tree.base.TreeNode;
 
@@ -27,6 +27,7 @@ public class $104 {
         if(root==null){
             return 0;
         }
+
         int left = maxDepth(root.getLeft());
         int right = maxDepth(root.getRight());
         return max(left, right) + 1;

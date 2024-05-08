@@ -16,12 +16,39 @@ public class $54 {
     public static void main(String[] args) {
         int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
 
-        List<Integer> integers = spiralOrder(matrix);
+        List<Integer> integers = spiralOrder2(matrix);
 
 
         System.out.println(integers);
     }
+    public static List<Integer> spiralOrder2(int[][] matrix) {
+        List<Integer> ans = new ArrayList();
+        int r = matrix.length,col = matrix[0].length;
+        int l = 0 ,ri = col -1,t = 0,b =r-1;
 
+        while(l<=ri&&t<=b){
+            for(int i = l;i<=ri;i++){
+                ans.add(matrix[t][i]);
+            }
+            for(int i = t+1;i<=b;i++){
+                ans.add(matrix[i][ri]);
+            }
+            if(l<ri && t<b){
+                for(int i = ri-1; i>l;i--){
+                    ans.add(matrix[b][i]);
+                }
+                for(int i = b; i>t;i--){
+                    ans.add(matrix[i][l]);
+                }
+            }
+
+            l++;
+            ri--;
+            t++;
+            b--;
+        }
+        return ans;
+    }
 
     public static List<Integer> spiralOrder(int[][] matrix) {
 
