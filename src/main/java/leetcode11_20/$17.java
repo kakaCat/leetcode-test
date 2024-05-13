@@ -23,11 +23,6 @@ public class $17 {
 
     public static  String[] nums = new String[]{"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
-//    public static List<String> letterCombinations(String digits) {
-//
-//    }
-
-
     private static String letterMap[] = {
             " ",    //0
             "",     //1

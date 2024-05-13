@@ -29,12 +29,19 @@ public class $206 {
     public static ListNode reverseList2(ListNode head) {
         ListNode pre=null, curr=head;
         while (curr!=null){
-            ListNode next = curr.next;
+            ListNode t = curr.next;
             curr.next = pre;
             pre = curr;
-            curr = next;
+            curr = t;
         }
         return pre;
+    }
+
+    public static void swap(ListNode cur ,ListNode pre){
+        ListNode t = cur.next;
+        cur.next = pre;
+        pre = cur;
+        cur = t;
     }
 
 }
