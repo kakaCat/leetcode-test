@@ -14,10 +14,25 @@ public class $860 {
 
 
     public static void main(String[] args) {
+        int[] sum  = {5,5,5,10,20};
 
+        lemonadeChange2(sum);
     }
 
-
+    public static boolean lemonadeChange2(int[] bills) {
+        int sum = 0 ;
+        for(int i=0;i<bills.length;i++){
+            if(bills[i] == 5){
+                sum+=5;
+            }else if(sum+5-bills[i]<0){
+                return false;
+            }else{
+                sum = sum+5;
+            }
+            continue;
+        }
+        return true;
+    }
     public boolean lemonadeChange(int[] bills) {
         int five = 0;
         int ten = 0;
